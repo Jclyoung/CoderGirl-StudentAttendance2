@@ -13,8 +13,23 @@ namespace StudentAttendance
 
         public int[] Scores { get; set; }
 
+        public Student(string name, int[] scores)
+        {
+            Name = name;
+            Scores = scores;
+
+        }
+
+        public Student()
+        {
+            Name = "name";
+            Scores = new int[] { };
+        }
+
+
         public bool HasSixOrMore()
         {
+           
             if (Scores.Length >= 6)
             {
                 return true;
